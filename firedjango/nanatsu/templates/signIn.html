@@ -1,0 +1,30 @@
+{% if message %}
+<script>
+	alert('{{message}}');
+</script>
+{% endif %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SignIn</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <form action="postsign/" method="post">
+  {% csrf_token %}
+  Email:
+  <input type="email" name="email">
+  Password:
+  <input type="password" name="passwors">
+  <input type="submit" value="signIn">
+  </form>
+</body>
+</html>
